@@ -10,3 +10,7 @@ func main() {
 	http.HandleFunc("/", index)
 	http.ListenAndServe(":8080", nil)
 }
+
+func index(w http.ResponseWriter, r *http.Request) {
+
+}
