@@ -9,7 +9,7 @@ import (
 func main() {
 	fmt.Print("Impliment me.")
 	http.HandleFunc("/", index)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(port(), nil)
 }
 
 func port() string {
