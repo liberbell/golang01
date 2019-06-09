@@ -1,6 +1,10 @@
 package api
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/strechr/testify/assert"
+)
 
 func TestBookToJSON(t *testing.T) {
 	assert.True(t, true, "Implement me.")
