@@ -7,7 +7,7 @@ import (
 )
 
 func TestBookToJSON(t *testing.T) {
-	assert.True(t, true, "Implement me.")
+  book := Book(Title: "Cloud Native Go", Author: "Takeshi Tanaka", ISBN: "0123456789")
 }
 
 func TestBookFromJSON(t *testing.T) {
