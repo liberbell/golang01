@@ -1,6 +1,9 @@
 package api
 
-import "net/http"
+import (
+	"encoding/json"
+	"net/http"
+)
 
 type Book struct {
 	Title  string
@@ -9,6 +12,10 @@ type Book struct {
 }
 
 func (b Book) ToJSON() []byte {
+	ToJSON, err := json.Marshal(b)
+	if err != nil {
+		panic(err)
+	}
 	return nil
 }
 
