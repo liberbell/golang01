@@ -3,6 +3,9 @@ package api
 import "net/http"
 
 type Book struct {
+	Title  string
+	Author string
+	ISBN   string
 }
 
 func (b Book) ToJSON() []byte {
