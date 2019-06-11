@@ -17,4 +17,8 @@ func main() {
 	if x > 5 && x < 15 {
 		fmt.Println("x is just right")
 	}
+
+	if x < 20 || x > 30 {
+		fmt.Println("x is out of range")
+	}
 }
