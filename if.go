@@ -8,4 +8,9 @@ func main() {
 	if x > 5 {
 		fmt.Println("x is big")
 	}
+	if x > 100 {
+		fmt.Println("x is very big")
+	} else {
+		fmt.Println("x is not that big")
+	}
 }
