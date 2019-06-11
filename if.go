@@ -13,4 +13,8 @@ func main() {
 	} else {
 		fmt.Println("x is not that big")
 	}
+
+	if x > 5 && x < 15 {
+		fmt.Println("x is just right")
+	}
 }
