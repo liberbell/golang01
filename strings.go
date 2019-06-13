@@ -20,7 +20,7 @@ func main() {
 
 	fmt.Println("It was ⑤")
 
-	poem = `
+	poem := `
   The road goes ever on
   Down from the door where it began
   `
