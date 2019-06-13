@@ -20,4 +20,11 @@ func main() {
 
 	fmt.Println("It was ⑤")
 
+	poem = `
+  The road goes ever on
+  Down from the door where it began
+  `
+
+	fmt.Println(poem)
+
 }
