@@ -1,5 +1,9 @@
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	nums := []int{16, 8, 42, 4, 23, 15}
+
+	fmt.Println(max)
 }
