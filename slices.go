@@ -26,6 +26,6 @@ func main() {
 	fmt.Println("-------------")
 
 	for i, name := range loons {
-		fmt.Println("%s at %d\n", name, i)
+		fmt.Printf("%s at %d\n", name, i)
 	}
 }
