@@ -13,4 +13,9 @@ func main() {
 	fmt.Println("-------------")
 
 	fmt.Println(loons[1:])
+	fmt.Println("-------------")
+
+	for i := 0; i < len(loons); i++ {
+		fmt.Println(loons[i])
+	}
 }
