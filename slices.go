@@ -33,4 +33,8 @@ func main() {
 	for _, name := range loons {
 		fmt.Println(name)
 	}
+	fmt.Println("-------------")
+
+	loons = append(loons, "elmer")
+	fmt.Println(loons)
 }
