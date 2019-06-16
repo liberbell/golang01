@@ -7,9 +7,9 @@ func main() {
 
 	max := nums[0]
 
-	for i := range nums {
-		if max < nums[i] {
-			max := nums[1]
+	for _, value := range nums[1:] {
+		if value < max {
+			max = value
 		}
 	}
 
