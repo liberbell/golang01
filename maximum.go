@@ -8,7 +8,7 @@ func main() {
   max := nums[0]
 
   for i := range nums {
-    if
+    if max < nums[1]
   }
 
 	fmt.Println(max)
