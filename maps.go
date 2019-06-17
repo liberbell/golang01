@@ -11,5 +11,14 @@ func main() {
 
 	fmt.Println(len(stocks))
 	fmt.Println(stocks["MSFT"])
+
 	fmt.Println(stocks["TSLA"])
+	value, ok := stocks["TSLA"]
+	if !ok {
+		fmt.Println("TSLA not found")
+	} else {
+		fmt.Println(value)
+	}
+
+	stock["TSLA"] = 322.12
 }
