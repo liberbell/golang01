@@ -27,4 +27,8 @@ func main() {
 	delete(stocks, "AMZN")
 	fmt.Println(stocks)
 
+	for key := range stocks {
+		fmt.Println(key)
+	}
+
 }
