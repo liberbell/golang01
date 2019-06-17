@@ -20,5 +20,5 @@ func main() {
 		fmt.Println(value)
 	}
 
-	stock["TSLA"] = 322.12
+	stocks["TSLA"] = 322.12
 }
