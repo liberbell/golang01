@@ -22,11 +22,8 @@ func main() {
 
 	stocks["TSLA"] = 322.12
 	fmt.Println(stocks["TSLA"])
+	fmt.Println(len(stocks))
 
-	// value, ok := stocks["TSLA"]
-	// if !ok {
-	// 	fmt.Println("TSLA not found")
-	// } else {
-	// 	fmt.Println(value)
-	// }
+	// delete(stocks[])
+
 }
