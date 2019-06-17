@@ -24,7 +24,7 @@ func main() {
 	fmt.Println(stocks["TSLA"])
 	fmt.Println(len(stocks))
 
-	delete(stocks["AMZN"])
+	delete(stocks, "AMZN")
 	fmt.Println(stocks)
 
 }
