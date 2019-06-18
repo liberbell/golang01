@@ -14,4 +14,8 @@ func main() {
 	values := []int{1, 2, 3, 4}
 	doubleAt(values, 2)
 	fmt.Println(values)
+
+	val := 10
+	double(val)
+	fmt.Println(val)
 }
