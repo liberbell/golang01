@@ -1,6 +1,9 @@
 package main
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	text := `
@@ -16,4 +19,6 @@ func main() {
 	for _, word := range words {
 		counts[strings.ToLower(word)]++
 	}
+
+	fmt.Println(counts)
 }
