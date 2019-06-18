@@ -31,4 +31,7 @@ func main() {
 		fmt.Println(key)
 	}
 
+	for key, value := range stocks {
+		fmt.Printf("%s -> %.2f\n", key, value)
+	}
 }
