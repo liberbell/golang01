@@ -1,5 +1,7 @@
 package main
 
+import "strings"
+
 func main() {
 	text := `
   Needles and pins
@@ -8,4 +10,6 @@ func main() {
   To catch me the wind
   `
 
+	words := strings.Fields(text)
+	counts := map[string]int{}
 }
