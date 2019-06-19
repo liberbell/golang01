@@ -1,6 +1,9 @@
 package main
 
-import "net/http"
+import (
+	"fmt"
+	"net/http"
+)
 
 func contentType(url string) (string, error) {
 	resp, err := http.Get(url)
@@ -8,4 +11,9 @@ func contentType(url string) (string, error) {
 		return "", err
 	}
 	defer resp.Body.Close()
+
+	ctype := resp.Header.Get("Content-Type")
+	if ctype == "" {
+		return "", fmt.Errorf("can`t find Content-Type Header")
+	}
 }
