@@ -23,4 +23,5 @@ func main() {
 	double(val)
 	fmt.Println(val)
 	doublePtr(&val)
+	fmt.Println(val)
 }
