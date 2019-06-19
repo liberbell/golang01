@@ -22,5 +22,6 @@ func main() {
 		Price:  99.98,
 		Buy:    true,
 	}
+	fmt.Printf("%+v\n", t2)
 
 }
