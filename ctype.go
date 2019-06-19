@@ -19,3 +19,12 @@ func contentType(url string) (string, error) {
 
 	return ctype, nil
 }
+
+func main() {
+	ctype, err := contentType("https://linkedin.com")
+	if err != nil {
+		fmt.Printf("ERROR: %s\n", err)
+	} else {
+		fmt.Println(ctype)
+	}
+}
