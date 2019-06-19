@@ -16,4 +16,6 @@ func contentType(url string) (string, error) {
 	if ctype == "" {
 		return "", fmt.Errorf("can`t find Content-Type Header")
 	}
+
+	return ctype, nil
 }
