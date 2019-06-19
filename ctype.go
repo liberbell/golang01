@@ -7,5 +7,5 @@ func contentType(url string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	defer resp.Body.Clouse()
+	defer resp.Body.Close()
 }
