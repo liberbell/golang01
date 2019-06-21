@@ -12,4 +12,5 @@ func (t *Trade) Value() float64 {
 	if t.Buy {
 		value = -value
 	}
+	return value
 }
