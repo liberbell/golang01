@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Trade struct {
 	Symbol string
 	Volume int
@@ -22,4 +24,5 @@ func main() {
 		Price:  99.98,
 		Buy:    true,
 	}
+	fmt.Println(t.Value())
 }
