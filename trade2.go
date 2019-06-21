@@ -14,3 +14,12 @@ func (t *Trade) Value() float64 {
 	}
 	return value
 }
+
+func main() {
+	t := Trade{
+		Symbol: "MSFT",
+		Volume: 10,
+		Price:  99.98,
+		Buy:    true,
+	}
+}
