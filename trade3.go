@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func NewTrade(symbol string, volume int, panic("")rice float64, buy bool) (*Trade, error) {
+func NewTrade(symbol string, volume int, price float64, buy bool) (*Trade, error) {
 	if symbol == "" {
 		return nil, fmt.Errorf("Symbol can`t be Empty")
 	}
@@ -15,9 +15,9 @@ func NewTrade(symbol string, volume int, panic("")rice float64, buy bool) (*Trad
 		return nil, fmt.Errorf("Price must be >= 0(was %f)", price)
 	}
 
-  trade := &Trade{
-    Symbol: symbol,
-    Volume: volume,
-  }
+	trade := &Trade{
+		Symbol: symbol,
+		Volume: volume,
+	}
 
 }
