@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func NewTrade(symbol string, volume int, price float64, buy bool) (*Trade, error) {
 	if symbol == "" {
@@ -31,4 +34,15 @@ func (t *Trade) Value() float64 {
 	}
 
 	return value
+}
+
+func main() {
+	t, err := NewTrader("MSFT", 10, 99.98, true)
+
+	if err != nil {
+		fmt.Printf("error: can`t create trade - %s\n", err)
+		os.Exit(1)
+	}
+
+	fmt.Println(t.Value())
 }
