@@ -39,7 +39,6 @@ func (t *Trade) Value() float64 {
 	if t.Buy {
 		value = -value
 	}
-
 	return value
 }
 
@@ -50,6 +49,5 @@ func main() {
 		fmt.Printf("error: can`t create trade - %s\n", err)
 		os.Exit(1)
 	}
-
 	fmt.Println(t.Value())
 }
