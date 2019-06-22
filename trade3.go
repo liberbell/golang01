@@ -7,11 +7,12 @@ func NewTrade(Symbol string, Volume int, Price float64, Buy bool) (*Trade, error
 		return nil, fmt.Errorf("Symbol can`t be Empty")
 	}
 
-  if Volume <= 0 {
-    return nil, fmt.Errorf("Volume must be >= 0 (was %d)", Volume)
-  }
+	if Volume <= 0 {
+		return nil, fmt.Errorf("Volume must be >= 0 (was %d)", Volume)
+	}
 
-  if Price <= 0 {
-    return nil, 
-  }
+	if Price <= 0.0 {
+		return nil, fmt.Errorf("Price must be >= 0(was %f)", Price)
+	}
+
 }
