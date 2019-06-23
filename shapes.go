@@ -42,4 +42,5 @@ func main() {
 	fmt.Println(c.Area())
 
 	shapes := []Shape{s, c}
+	sa := sumAreas(shapes)
 }
