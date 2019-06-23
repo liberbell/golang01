@@ -12,7 +12,7 @@ type Point struct {
 
 func (p *Point) Move(dx int, dy int) {
 	p.X += dx
-	p.y += dy
+	p.Y += dy
 }
 
 type Square struct {
