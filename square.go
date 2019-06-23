@@ -5,7 +5,7 @@ func NewSquare(x int, y int, length int) (*Square, error) {
     return nil, fmt.Errorf("Length must be > 0")
   }
   s := &Square {
-    Center := Point{x, y}
+    Center := Point{x, y},
     Length := length,
   }
 }
