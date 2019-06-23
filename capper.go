@@ -16,4 +16,6 @@ func (c *Capper) Write(p []byte) (n int, err error) {
 		}
 		out[i] = c
 	}
+
+	return c.wtr.Write(out)
 }
