@@ -1,5 +1,10 @@
 package main
 
+type Square struct {
+  Center Point
+  Length int
+}
+
 func NewSquare(x int, y int, length int) (*Square, error) {
   if length <= 0 {
     return nil, fmt.Errorf("Length must be > 0")
