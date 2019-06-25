@@ -14,5 +14,5 @@ func main() {
 		panic(err)
 	}
 	defer file.Close()
-	fmt.Println(err)
+	fmt.Println("file opened")
 }
