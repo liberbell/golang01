@@ -1,6 +1,9 @@
 package main
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 type Config struct {
 }
@@ -15,4 +18,11 @@ func readConfig(path string) (*Config, error) {
 
 	cfg := &Config{}
 	return cfg, nil
+}
+
+func main() {
+	cfg, err := readConfig("/path/to/config.toml")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "error: %s\n", err)
+	}
 }
