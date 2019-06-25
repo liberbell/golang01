@@ -24,7 +24,7 @@ func readConfig(path string) (*Config, error) {
 }
 
 func setupLogging() {
-	out, err := os.OpenFile("app.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 644)
+	out, err := os.OpenFile("app.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		return
 	}
