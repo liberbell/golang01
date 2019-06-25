@@ -1,16 +1,18 @@
 package main
 
-func safeValue(vals []int, index int) int {
-  defer func() {
-    if err := recover(); err := nil {
-      fmt.Printf("ERROR: %s\n", err)
-    }
-  }()
+import "fmt"
 
-  return vals[index]
+func safeValue(vals []int, index int) int {
+	defer func() {
+		if err := recover(); err != nil {
+			fmt.Printf("ERROR: %s\n", err)
+		}
+	}()
+
+	return vals[index]
 }
 
 func main() {
-  v := safeValue([]int{1, 2, 3}, 10)
-  fmt.Println(v)
+	v := safeValue([]int{1, 2, 3}, 10)
+	fmt.Println(v)
 }
