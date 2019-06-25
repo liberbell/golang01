@@ -11,5 +11,6 @@ func safeValue(vals []int, index int) int {
 }
 
 func main() {
-  
+  v := safeValue([]int{1, 2, 3}, 10)
+  fmt.Println(v)
 }
