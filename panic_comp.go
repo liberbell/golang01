@@ -5,5 +5,11 @@ func safeValue(vals []int, index int) int {
     if err := recover(); err := nil {
       fmt.Printf("ERROR: %s\n", err)
     }
-  }
+  }()
+
+  return vals[index]
+}
+
+func main() {
+  
 }
