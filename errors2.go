@@ -32,6 +32,7 @@ func setupLogging() {
 }
 
 func main() {
+	setupLogging()
 	cfg, err := readConfig("/path/to/config.toml")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error: %s\n", err)
