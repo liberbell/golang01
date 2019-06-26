@@ -25,7 +25,6 @@ func killServer(pidFile string) error {
 	if err != nil {
 		return errors.Wrap(err, "bad process id")
 	}
-
 	fmt.Printf("killing server with pid=%d\n", pid)
 	return nil
 }
