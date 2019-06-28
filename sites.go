@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
 
 func returnType(url string) {
-	resp, err := http.get(url)
+	resp, err := http.Get(url)
 	if err != nil {
 		fmt.Printf("error: %s\n", err)
 		return
