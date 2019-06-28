@@ -12,3 +12,7 @@ func returnType(url string) {
 	ctype := resp.Header.Get("content-type")
 	fmt.Printf("%s -> %s\n", url, ctype)
 }
+
+func main() {
+
+}
