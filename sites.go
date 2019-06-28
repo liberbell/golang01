@@ -17,5 +17,6 @@ func main() {
 	urls := []string{
 		"https://golang.org",
 		"https://api.github.com",
+		"https://httpbin.org/xml",
 	}
 }
