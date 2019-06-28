@@ -14,7 +14,8 @@ func returnType(url string) {
 }
 
 func main() {
-  urls := []string{
-    "https://golang.org"
-  }
+	urls := []string{
+		"https://golang.org",
+		"https://api.github.com",
+	}
 }
