@@ -28,6 +28,8 @@ func main() {
 		wg.Add(1)
 		go func(url string) {
 			returnType(url)
+			wg.Done()
 		}(url)
 	}
+	wg.Wait()
 }
