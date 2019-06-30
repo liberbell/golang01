@@ -15,4 +15,12 @@ func main() {
 	fmt.Printf("got %d\n", val)
 
 	fmt.Println("----------")
+
+  go func() {
+    for i := 0; i < 3; i++ {
+      fmt.Printf("sendign %d\n", i)
+      ch <- i
+      time.Sleep(time.Second)
+    }
+  }
 }
