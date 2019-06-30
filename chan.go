@@ -13,4 +13,6 @@ func main() {
 
 	val := <-ch
 	fmt.Printf("got %d\n", val)
+
+	fmt.Println("----------")
 }
