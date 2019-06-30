@@ -29,6 +29,6 @@ func main() {
 
 	for i := 0; i < 3; i++ {
 		val := <-ch
-		fmt.Printf("received %d\n", i)
+		fmt.Printf("received %d\n", val)
 	}
 }
