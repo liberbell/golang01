@@ -31,4 +31,19 @@ func main() {
 		val := <-ch
 		fmt.Printf("received %d\n", val)
 	}
+
+	fmt.Println("----------")
+
+	go func() {
+		for i := 0; i < 3; i++ {
+			fmt.Printf("sending %d\n", i)
+			ch <- i
+			time.Sleep(time.Second)
+		}
+		close(ch)
+	}()
+
+	for i := range ch {
+		fmt.Printf("recieved %d\n", i)
+	}
 }
