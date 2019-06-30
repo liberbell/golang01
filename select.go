@@ -15,4 +15,6 @@ func main() {
 	case val := <-ch2:
 		fmt.Printf("got %d from ch2\n", val)
 	}
+
+	fmt.Println("-------")
 }
