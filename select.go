@@ -31,5 +31,6 @@ func main() {
 	case val := <-out:
 		fmt.Printf("got %f\n", val)
 	case <-time.After(200 * time.Millisecond):
+		fmt.Println("timeout")
 	}
 }
