@@ -23,4 +23,7 @@ func parseSignatureFile(path string) (map[string]string, error) {
 		}
 		sigs[fields[1]] = fields[0]
 	}
+	if err := scanner.Err(); err != nil {
+		return nil, err
+	}
 }
