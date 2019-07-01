@@ -30,5 +30,6 @@ func main() {
 	select {
 	case val := <-out:
 		fmt.Printf("got %f\n", val)
+	case <-time.After(200 * time.Millisecond):
 	}
 }
