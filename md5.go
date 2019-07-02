@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-func parseSignatureFile(path string) (map[string]string, error) {
+func parseSignaturesFile(path string) (map[string]string, error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return nil, err
