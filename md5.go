@@ -54,4 +54,11 @@ type result struct {
 func md5Worker(path string, sig string, out chan *result) {
 	r := &result{path: path}
 	s, err := fileMD5(path)
+	if err != nil {
+		r.err = err
+		out <- r
+		return
+	}
+	r.match = (s == sig)
+	out <- r
 }
