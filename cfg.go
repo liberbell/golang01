@@ -22,6 +22,7 @@ func main() {
 	}
 
 	defer file.Close()
+
 	cfg := &Config{}
 	if err := toml.NewDecoder(file); err != nil {
 		log.Fatalf("error: can`t decode configuration file - %s", err)
