@@ -44,3 +44,9 @@ func fileMD5(path string) (string, error) {
 	}
 	return fmt.Sprintf("%x", hash.Sum(nil), nil)
 }
+
+type result struct {
+	path  string
+	match bool
+	err   error
+}
