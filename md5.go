@@ -50,3 +50,8 @@ type result struct {
 	match bool
 	err   error
 }
+
+func md5Worker(path string, sig string, out chan *result) {
+	r := &result{path: path}
+
+}
