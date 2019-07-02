@@ -3,6 +3,8 @@ package main
 import (
 	"log"
 	"os"
+
+  "github.com/pelletier/go-toml"
 )
 
 type Config struct {
@@ -19,4 +21,6 @@ func main() {
 	}
 
 	defer file.Close()
+  cfg := &Config{}
+  if err := toml.NewDecoder(file)
 }
