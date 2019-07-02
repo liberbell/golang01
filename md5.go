@@ -69,6 +69,11 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error: can`t read signature file - %s\n", err)
 	}
+	out := make(chan *result)
+	for path, sig := range sigs {
+		go md5Worker(path, sig, out)
+	}
+
 	ok := true
 	for range sigs {
 		r := <-out
