@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-  "github.com/pelletier/go-toml"
+	"github.com/pelletier/go-toml"
 )
 
 type Config struct {
@@ -21,6 +21,8 @@ func main() {
 	}
 
 	defer file.Close()
-  cfg := &Config{}
-  if err := toml.NewDecoder(file)
+	cfg := &Config{}
+	if err := toml.NewDecoder(file); err != nil {
+		log.Fatalf("error: can`t decode configuration file - %s", err)
+	}
 }
