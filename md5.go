@@ -69,4 +69,12 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error: can`t read signature file - %s\n", err)
 	}
+	ok := true
+	for range sigs {
+		r := <-out
+		switch {
+		case r.err != nil:
+			fmt.Printf("%s: error %s\n", r.path, r.err)
+		}
+	}
 }
