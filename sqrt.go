@@ -21,5 +21,6 @@ func Sqrt(val float64) (float64, error) {
 		if Abs(guess*guess-val) <= epsilon {
 			return guess, nil
 		}
+		guess = (val/guess + guess) / 2.0
 	}
 }
