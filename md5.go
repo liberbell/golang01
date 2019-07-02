@@ -75,6 +75,10 @@ func main() {
 		switch {
 		case r.err != nil:
 			fmt.Printf("%s: error %s\n", r.path, r.err)
+			ok = false
+		case !r.match:
+			fmt.Printf("%s: signature mismatch\n", r.path)
+			ok = false
 		}
 	}
 }
