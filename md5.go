@@ -5,6 +5,7 @@ import (
 	"crypto/md5"
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"strings"
 )
@@ -61,4 +62,11 @@ func md5Worker(path string, sig string, out chan *result) {
 	}
 	r.match = (s == sig)
 	out <- r
+}
+
+func main() {
+	sigs, err := parseSignaturesFile("md5sum.txt")
+	if err != nil {
+		log.Fatalf("Error: can`t read signature file - %s\n", err)
+	}
 }
