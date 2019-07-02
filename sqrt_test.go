@@ -12,4 +12,8 @@ func TestSimple(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Error in calculation - %s", err)
 	}
+
+	if !almostEqual(val, 1.414214) {
+		t.Fatalf("bad value - %f", val)
+	}
 }
