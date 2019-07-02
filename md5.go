@@ -81,4 +81,7 @@ func main() {
 			ok = false
 		}
 	}
+	if !ok {
+		os.Exit(1)
+	}
 }
