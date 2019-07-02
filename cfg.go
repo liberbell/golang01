@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -25,4 +26,5 @@ func main() {
 	if err := toml.NewDecoder(file); err != nil {
 		log.Fatalf("error: can`t decode configuration file - %s", err)
 	}
+	fmt.Printf("%+v\n", cfg)
 }
