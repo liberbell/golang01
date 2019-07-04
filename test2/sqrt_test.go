@@ -36,7 +36,9 @@ func TestMany(t *testing.T) {
 	defer file.Close()
 
 	rdr := csv.NewReader(file)
-
+	for {
+		record, err := rdr.Read()
+	}
 	testCases := []testCase{
 		{0.0, 0.0},
 		{2.0, 1.414214},
