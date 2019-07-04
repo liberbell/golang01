@@ -2,6 +2,7 @@ package sqrt
 
 import (
 	"fmt"
+	"os"
 	"testing"
 )
 
@@ -27,6 +28,7 @@ type testCase struct {
 }
 
 func TestMany(t *testing.T) {
+	file, err := os.Open("sqrt_cases.csv")
 	testCases := []testCase{
 		{0.0, 0.0},
 		{2.0, 1.414214},
