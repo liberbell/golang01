@@ -61,7 +61,7 @@ func TestMany(t *testing.T) {
 	t.Run(fmt.Sprintf("%f", val), func(t *testing.T) {
 		out, err := Sqrt(val)
 		if err != nil {
-			t.Fatalf(err)
+			t.Fatal(err)
 		}
 
 		if !almostEqual(out, expected) {
