@@ -57,22 +57,15 @@ func TestMany(t *testing.T) {
 	if err != nil {
 		t.Fatalf("bad value - %s", record[1])
 	}
-	testCases := []testCase{
-		{0.0, 0.0},
-		{2.0, 1.414214},
-		{9.0, 3.0},
-	}
 
-	for _, tc := range testCases {
-		t.Run(fmt.Sprintf("%f", tc.value), func(t *testing.T) {
-			out, err := Sqrt(tc.value)
-			if err != nil {
-				t.Fatal("error")
-			}
+	t.Run(fmt.Sprintf("%f", val), func(t *testing.T) {
+		out, err := Sqrt(val)
+		if err != nil {
+			t.Fatalf(err)
+		}
 
-			if !almostEqual(out, tc.expected) {
-				t.Fatalf("%f != %f", out, tc.expected)
-			}
-		})
-	}
+		if !almostEqual(out, expected) {
+			t.Fatalf("%f != %f", out, expected)
+		}
+	})
 }
