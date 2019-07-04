@@ -52,6 +52,11 @@ func TestMany(t *testing.T) {
 	if err != nil {
 		t.Fatalf("bad value - %s", record[0])
 	}
+
+	expected, err := strconv.ParseFloat(record[1], 64)
+	if err != nil {
+		t.Fatalf("bad value - %s", record[1])
+	}
 	testCases := []testCase{
 		{0.0, 0.0},
 		{2.0, 1.414214},
