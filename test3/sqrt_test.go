@@ -24,7 +24,7 @@ func BenchmarkSqrt(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		_, err := Sqrt(float64(i))
 		if err != nil {
-			b.Fatalf(err)
+			b.Fatal(err)
 		}
 	}
 }
