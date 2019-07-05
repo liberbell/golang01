@@ -25,6 +25,15 @@ func TestSimple(t *testing.T) {
 	}
 }
 
+func BenchmarkSqrt(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		_, err := Sqrt(float64(i))
+		if err != nil {
+			b.Fatalf(err)
+		}
+	}
+}
+
 type testCase struct {
 	value    float64
 	expected float64
