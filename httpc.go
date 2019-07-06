@@ -1,6 +1,9 @@
 package main
 
 import (
+	"bytes"
+	"encoding/json"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -21,4 +24,12 @@ func main() {
 	defer resp.Body.Close()
 
 	io.Copy(os.Stdout, resp.Body)
+	fmt.Println("----------")
+
+	var buf bytes.Buffer
+	enc := json.NewEncoder(&buf)
+	if err := enc.Encode(job); err != nil {
+		log.Fatalf("error: can`t encode job - %s", err)
+	}
+
 }
