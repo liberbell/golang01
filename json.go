@@ -30,4 +30,10 @@ func main() {
 		log.Fatalf("error: can`t decode - %s", err)
 	}
 	fmt.Printf("got: %+v\n", req)
+
+	prevBalance := 8500000.0
+	resp := map[string]interface{}{
+		"ok":      true,
+		"balance": prevBalance + req.Amount,
+	}
 }
