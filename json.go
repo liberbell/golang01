@@ -3,6 +3,8 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
+	"log"
 )
 
 var data = `
@@ -22,4 +24,10 @@ type Request struct {
 func main() {
 	rdr := bytes.NewBufferString(data)
 	dec := json.NewDecoder(rdr)
+
+	req := &Request{}
+	if err := dec.Decode(req); err != nil {
+		log.Fatalf("error: can`t decode - %s", err)
+	}
+	fmt.Printf("got: %+v\n", req)
 }
