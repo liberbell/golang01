@@ -1,6 +1,9 @@
 package main
 
-import "bytes"
+import (
+	"bytes"
+	"encoding/json"
+)
 
 var data = `
 {
@@ -18,4 +21,5 @@ type Request struct {
 
 func main() {
 	rdr := bytes.NewBufferString(data)
+	dec := json.NewDecoder(rdr)
 }
