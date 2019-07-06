@@ -8,9 +8,9 @@ import (
 )
 
 type Job struct {
-  User string : `json:"user"`
-  Action string : `json:"action"`
-  Count int : `json:"count"`
+	User   string `json:"user"`
+	Action string `json:"action"`
+	Count  int    `json:"count"`
 }
 
 func main() {
