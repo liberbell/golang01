@@ -1,6 +1,6 @@
 package main
 
-var date = `
+var data = `
 {
   "user" : "Scrooge McDuck",
   "type" : "deposit",
