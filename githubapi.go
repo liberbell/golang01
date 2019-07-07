@@ -31,7 +31,7 @@ func userInfo(login string) (*User, error) {
 func main() {
 	user, err := userInfo("eliberbell")
 	if err != nil {
-		log.Fatalf("error: %s, err")
+		log.Fatalf("error: %s", err)
 	}
 	fmt.Printf("%+v\n", user)
 }
