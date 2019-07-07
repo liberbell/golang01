@@ -24,4 +24,5 @@ func userInfo(login string) (*User, error) {
 	if err := dec.Decode(user); err != nil {
 		return nil, err
 	}
+	return user, nil
 }
