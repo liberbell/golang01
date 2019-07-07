@@ -26,3 +26,10 @@ func userInfo(login string) (*User, error) {
 	}
 	return user, nil
 }
+
+func main() {
+	user, err := userInfo("eliberbell")
+	if err != nil {
+
+	}
+}
