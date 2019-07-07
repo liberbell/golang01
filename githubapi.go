@@ -18,6 +18,7 @@ func userInfo(login string) (*User, error) {
 	if err != nil {
 		return nil, err
 	}
+
 	defer resp.Body.Close()
 
 	user := &User{}
