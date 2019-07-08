@@ -45,7 +45,10 @@ func mathHandler(w http.ResponseWriter, r *http.Request) {
 		} else {
 			resp.Result = req.Left / req.Right
 		}
+	default:
+		resp.Error = fmt.Sprintf("unknown operation: %s".req.Op)
 	}
+	w.Handler().Set("Content-Type", "application/json")
 }
 
 func main() {
