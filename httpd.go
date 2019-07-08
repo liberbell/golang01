@@ -40,7 +40,11 @@ func mathHandler(w http.ResponseWriter, r *http.Request) {
 	case "*":
 		resp.Result = req.Left * req.Right
 	case "/":
-		reps.Result = req.Left / req.Right
+		if req.Right == 0.0 {
+			resp.Error = "division by 0"
+		} else {
+			resp.Result = req.Left / req.Right
+		}
 	}
 }
 
