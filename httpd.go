@@ -35,6 +35,10 @@ func mathHandler(w http.ResponseWriter, r *http.Request) {
 	switch req.Op {
 	case "+":
 		resp.Result = req.Left + req.Right
+	case "-":
+		resp.Result = req.Left - req.Right
+	case "*":
+		resp.Result = req.Left * req.Right
 	}
 }
 
