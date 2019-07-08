@@ -11,9 +11,14 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 type MathRequest struct {
-	Op    string `json:"op"`
-	Left  string `json:"left"`
-	Right string `json:"right"`
+	Op    string  `json:"op"`
+	Left  float64 `json:"left"`
+	Right float64 `json:"right"`
+}
+
+type MathResponse struct {
+	Error  string  `json:"error"`
+	Result float64 `json:result`
 }
 
 func main() {
