@@ -13,6 +13,6 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/hello", helloHandler)
 	if err := http.ListenAndServe(":8080", nil); err != nil {
-		log.Fatalf(err)
+		log.Fatal(err)
 	}
 }
