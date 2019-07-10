@@ -18,6 +18,10 @@ type Entry struct {
 	Value interface{} `json:value`
 }
 
+func sendResponse(entry *Entry, w http.ResponseWriter) {
+	w.Header().Set("Content-Type", "application/json")
+	enc := json.NewEncoder(w)
+}
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello Gophers!")
 }
