@@ -1,16 +1,22 @@
 package main
 
-var (
-	db = map[string]interface{}{}
-	dblock sync.Mutex
-)
-
 import (
 	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
+	"sync"
 )
+
+var (
+	db     = map[string]interface{}{}
+	dblock sync.Mutex
+)
+
+type Entry struct {
+	Key   string      `json:"key"`
+	Value interface{} `json:value`
+}
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello Gophers!")
