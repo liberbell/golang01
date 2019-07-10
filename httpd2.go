@@ -43,7 +43,7 @@ func kvPostHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func kvGetHandler(w http.ResponseWriter, r *http.Request) {
-	key := u.URL.Path[4:]
+	key := r.URL.Path[4:]
 	dbLock.Lock()
 	defer dbLock.Unlock()
 
