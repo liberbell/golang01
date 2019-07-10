@@ -21,6 +21,9 @@ type Entry struct {
 func sendResponse(entry *Entry, w http.ResponseWriter) {
 	w.Header().Set("Content-Type", "application/json")
 	enc := json.NewEncoder(w)
+	if err := enc.Encode(entyr); err != nil {
+		log.Printf("error encoding %+v - %s\n", entry, err)
+	}
 }
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello Gophers!")
