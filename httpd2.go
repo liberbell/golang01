@@ -42,6 +42,12 @@ func kvPostHandler(w http.ResponseWriter, r *http.Request) {
 	sendResponse(entry, w)
 }
 
+func kvGetHandler(w http.ResponseWriter, r *http.Request) {
+	key := u.URL.Path[4:]
+	dbLock.Lock()
+	defer dbLock.Unlock()
+}
+
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello Gophers!")
 }
