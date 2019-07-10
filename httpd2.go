@@ -1,9 +1,9 @@
 package main
 
-var {
+var (
 	db = map[string]interface{}{}
 	dblock sync.Mutex
-}
+)
 
 import (
 	"encoding/json"
