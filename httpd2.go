@@ -63,7 +63,7 @@ func kvGetHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	// http.HandleFunc("/hello", helloHandler)
 	// http.HandleFunc("/math", mathHandler)
-	http.HnadleFunc("/db", kvPostHandler)
+	http.HandleFunc("/db", kvPostHandler)
 	http.HandleFunc("/db/", kvGetHandler)
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal(err)
