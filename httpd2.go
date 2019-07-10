@@ -10,7 +10,7 @@ import (
 
 var (
 	db     = map[string]interface{}{}
-	dblock sync.Mutex
+	dbLock sync.Mutex
 )
 
 type Entry struct {
@@ -34,7 +34,12 @@ func kvPostHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
+
+	dbLock.Lock()
+	defer dbLock.Unlock()
+	db[entry.Key] = entry.Value
 }
+
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello Gophers!")
 }
